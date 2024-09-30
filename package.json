@@ -1,0 +1,37 @@
+{
+  "name": "bython-bint",
+  "displayName": "bython-bint",
+  "description": "Syntax highlight for Bython programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bython",
+        "aliases": [
+          "Bython",
+          "bython"
+        ],
+        "extensions": [
+          ".by"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bython",
+        "scopeName": "source.by",
+        "path": "./syntaxes/bython.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}

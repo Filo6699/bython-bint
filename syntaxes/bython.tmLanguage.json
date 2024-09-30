@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Bython",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+		  "include": "#comments"
+		},
+		{
+		  "include": "#numbers"
+		},
+		{
+		  "include": "#types"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.bython",
+				"match": "\\b(create|if|proc|print|exec|input|endproc|ret)\\b"
+			}]
+		},
+		"operators": {
+			"name": "keyword.operator.bython",
+			"match": "\\b(add|sub|rshi|gre)\\b"
+		},
+		"comments": {
+			"name": "comment.line.double-slash.bython",
+			"begin": "//",
+			"end": "$"
+		},
+		"numbers": {
+			"name": "constant.numeric.bython",
+			"match": "\\b\\d+\\b"
+		},
+		"variables": {
+		  "name": "variable.bython",
+		  "match": "\\b[a-z]\\b"
+		},
+		"types": {
+		  "name": "storage.type.bython",
+		  "match": "\\b(int|float)\\b"
+		}
+	},
+	"scopeName": "source.by"
+}
